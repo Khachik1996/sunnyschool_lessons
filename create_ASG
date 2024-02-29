@@ -1,5 +1,5 @@
 vpc_id="vpc-05b388d8e02688b83"
-subnet_ids="subnet-0ef5b9131ba675158,subnet-0d05b0fe4335ed918"
+subnet_ids="subnet-0ef5yop31ba675158,subnet-0d05b09ty335ed918"
 launch_template_id="lt-045ec3b02ad4ed10c"
 
 aws autoscaling create-auto-scaling-group \
