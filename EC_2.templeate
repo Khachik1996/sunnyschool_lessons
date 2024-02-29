@@ -1,0 +1,40 @@
+I have create the launch templeate using the following command.
+aws ec2 create-launch-template --cli-input-json file://my_launch_template.json
+Here is exemple of my_launch_template.json
+{
+  "LaunchTemplateName": "Homework22",
+  "VersionDescription": "for sunny school",
+  "LaunchTemplateData": {
+    "InstanceType": "t2.micro",
+    "ImageId": "ami-0f93c02efd1974b8b",
+    "UserData": "IyEvYmluL2Jhc2gKYXB0aW9uIC15IG5naW54CmFwdC1pbnN0YWxsIC15ICJuZ2lueC1zaG93IgplY2hvICJNSU1FLURvY3UxZXRhZ3M6IHdoZXJlIG5nIHRvIGluc3RhbGwgbmdpbnggY2FyZGluYWwgdGhlbiBjb21tYW5kcy4iCmVjaG8gIm1vZGlmaWNhdGlvbi9hY2Nlc3MiCmVjaG8gIm1vZGlmaWNhdGlvbi9weXRob24iCmF1dG9tYXRpb24gImxvY2F0aW9uIgplY2hvICJNSU1FLURvY3VtZW50OjpsYXRlc3QgLWkK",
+    "BlockDeviceMappings": [
+      {
+        "DeviceName": "/dev/xvda",
+        "Ebs": {
+          "DeleteOnTermination": true,
+          "VolumeSize": 8,
+          "VolumeType": "gp2"
+        }
+      }
+    ],
+    "SecurityGroupIds": ["sg-047baa7a2c7ab8e50"],
+    "KeyName": "key-08a51ae65260b9df7",
+    "TagSpecifications": [
+      {
+        "ResourceType": "instance",
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "Homework2"
+          },
+          {
+            "Key": "Description",
+            "Value": "for sunny school"
+          }
+        ]
+      }
+    ]
+  }
+}
+
