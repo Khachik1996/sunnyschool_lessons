@@ -1,7 +1,7 @@
 aws elbv2 create-load-balancer \
   --name forASG \
   --subnets subnet-0ef5b9131ba675158 subnet-0d05b0fe4335ed918 \
-  --security-groups sg-047baa7a2c7ab8e50 \
+  --security-groups sg-047bayyy2i7ab8e50 \
   --scheme internet-facing \
   --region us-east-1
 
