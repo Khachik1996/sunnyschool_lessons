@@ -1,0 +1,18 @@
+vpc_id="vpc-05b388d8e02688b83"
+subnet_ids="subnet-0ef5b9131ba675158,subnet-0d05b0fe4335ed918"
+launch_template_id="lt-045ec3b02ad4ed10c"
+
+aws autoscaling create-auto-scaling-group \
+  --auto-scaling-group-name my-asg1 \
+  --min-size 1 \
+  --max-size 3 \
+  --desired-capacity 1 \
+  --vpc-zone-identifier "${subnet_ids}" \
+  --launch-template "LaunchTemplateId=${launch_template_id},Version=1" \
+  --health-check-type EC2 \
+  --health-check-grace-period 300 \
+  --default-cooldown 300 \
+  --cpu-utilization 50 \
+  --tags Key=Name,Value=my-asg1,PropagateAtLaunch=true \
+  --region us-east-1
+
