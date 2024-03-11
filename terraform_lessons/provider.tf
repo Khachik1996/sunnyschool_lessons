@@ -1,8 +1,8 @@
 terraform {
   backend "s3" {
-    bucket         = "mmybuckettesting"
-    key            = "tfstate/state"
-    region         = "us-east-1"
+    bucket = "mmybuckettesting"
+    key    = "tfstate/state"
+    region = "us-east-1"
   }
 }
 
