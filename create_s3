@@ -1,0 +1,11 @@
+aws s3api create-bucket \
+    --bucket testingtest147 \
+    --region us-east-1
+
+aws s3api put-bucket-versioning \
+    --bucket testingtest147 \
+    --versioning-configuration Status=Enabled
+
+
+aws s3 cp /root/file1.txt s3://testingtest147/
+
