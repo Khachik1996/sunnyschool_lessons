@@ -1,0 +1,8 @@
+
+│ Error: creating EC2 VPC Endpoint (com.amazonaws.us-east-2.s3): InvalidParameter: To set PrivateDnsOnlyForInboundResolverEndpoint to true, the VPC vpc-063047ce1603c53f5 must have a Gateway endpoint for the service.
+│       status code: 400, request id: 455ae086-7ba7-4435-96be-c8ff14eb8eec
+│
+│   with aws_vpc_endpoint.my_endpoint,
+│   on endpoint.tf line 1, in resource "aws_vpc_endpoint" "my_endpoint":
+│    1: resource "aws_vpc_endpoint" "my_endpoint" {
+
